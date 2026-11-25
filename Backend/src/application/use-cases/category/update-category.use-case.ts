@@ -1,5 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import { CategoryRepository } from "../../domain/repositories/category.repository.js";
+import { CategoryRepository } from "../../../domain/repositories/category.repository.js";
 
 @Injectable()
 export class UpdateCategoryUseCase {

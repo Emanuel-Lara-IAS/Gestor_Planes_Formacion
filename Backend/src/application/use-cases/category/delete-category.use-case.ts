@@ -1,13 +1,13 @@
 import { Injectable } from "@nestjs/common";
-import { CategoryRepository } from "../../domain/repositories/category.repository.js";
+import { CategoryRepository } from "../../../domain/repositories/category.repository.js";
 
 @Injectable()
-export class GetByIdCategoriesUseCase {
+export class DeleteCategoryUseCase {
     constructor(
         private readonly categoryRepository: CategoryRepository
     ){}
 
     execute(id: string){
-        return this.categoryRepository.findById(id)
+        return this.categoryRepository.delete(id)
     }
 }
